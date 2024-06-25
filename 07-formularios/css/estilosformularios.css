@@ -1,0 +1,62 @@
+.input{
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid green;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.input[name="password"] {/*esta es una manera de cambiar el estilo de
+    un elemento que tenga la misma clase pero lo queremos con algo
+    diferente a los otros, usamos unos de sus atributos entre corchetes*/
+    color: red;
+}
+.input-moderno{
+    border: none;
+    border-bottom: 1px solid #c2c2c2 ;
+    outline: none;
+    padding: 5px 5px;
+    color: #5f5f5f;
+}
+.input-moderno::placeholder{
+    color: #c2c2c2;
+}
+.input-moderno:focus {
+    border-bottom: 1px solid #5f5f5f;
+}
+.input-background{
+    background-color: aquamarine;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    color: white;
+    box-shadow: 0 0 10px #ccc;/*seria para la sobra de el input, 
+    el pimer elemento seria para el eje x el segundo para el eje y
+    el tercero la difuminacion y el ultimo el color de la sombra*/
+}
+.input-background::placeholder{
+    color: #807474;
+}
+
+.input-search{
+    padding: 10px;
+    padding-left: 30px;
+    border: none;
+    background-color: white;
+    border-radius: 8px;
+    margin: 10px;
+    background-image: url(https://cdn-icons-png.flaticon.com/128/1566/1566577.png);
+    background-repeat: no-repeat;
+    background-position: 5px;
+    background-size: 25px;
+}
+textarea{
+    resize: horizontal;/*o vertical si queremos alguna de las dos y no
+    las dos que vienen por defecto, o none que es para que no se pueda
+    cambiar el tamaño*/
+}
+select{
+    width: 100%;
+    padding: 15px;
+    background-color: #ccc;
+}

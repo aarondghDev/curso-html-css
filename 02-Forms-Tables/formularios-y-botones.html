@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formularios</title>
+    </head>
+    <body>
+        <form action="resultado.html" method="GET">
+        <div>
+            <label  for ="nombreusuario"> Nombre de usuario</label>
+            <input type="text" name="nombreusuario" id="nombreusuario" required>
+        </div>
+        <br>
+        <div>
+            <label for="comentarios">comentarios</label>
+            <textarea name="comentarios" id="comentarios"></textarea>
+        </div>
+        <br>
+        <div>
+           <label for="password"> Contraseña </label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <br>
+        <div>
+            <label for="edad"> Cual es tu edad </label>
+             <input type="number" name="edad" id="edad" min="0" max="99" step="2" required>
+         </div>
+         <div>
+            <label for="fechanacimiento"> Cual es tu fecha de nacimiento </label>
+             <input type="date" name="fechanacimiento" id="fechanacimiento" required>
+         </div>
+         <br>
+         <div>
+            <label for="email"> Cual es tu email </label>
+             <input type="email" name="email" id="email" required>
+         </div>
+         <br>
+            <button type="submit">enviar</button>
+            <button type="reset"> Reset</button>
+        </form>
+    </body>
+</html>

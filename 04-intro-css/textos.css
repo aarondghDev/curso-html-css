@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,700;1,400&display=swap');
+
+html {
+    /*importado desde fonts.google.com*/
+    font-family: 'Neuton', serif;
+    font-weight: 700;
+    font-style: italic;
+}

@@ -1,0 +1,20 @@
+.padre{
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+}
+.hijo{
+    width: 50%;
+    height: 50%;
+    background-color: beige;
+    /*transition: all 5s;/*con esto le decimos al objeto que se mueve(por eso se pone este atributo en la clase del objeto que se mueve) que afecte a todo con el "all" y que la transicion dure 1 segund0*/
+/*  transition: transform 5s; con esta en vez de decirle que afecte con un tiempo a todos los atributos que cambian con el hover le estamos especificando el atributo que queremos que tenga una transicion, que en ves de ser el "transfor" pudiera ser "background-color" o un tiempo diferente para cada uno*/
+    transition: background-color 3s, transform 1s cubic-bezier(0.99, 0.13, 0.33, 1.53) 2s;/*y este ultimo atributo "2s" seria para añadir delay a la transicion osea que tardara 2 segundos en este caso en empezar la transicion, el day seria el segundo atributo con tiempo*/
+    /*esto de arriba "cubic-bezier(0.99, 0.13, 0.33, 1.53)"es un atributo especifico que podemos darle a la transicion en este caso para que rebote y lo podemos obtener en la herramienta de desarrolladores en chrome, tambien estan los atributos linear que es para que sea un movimiento uniforme, la ease que es la que viene por defecto si no le especificamos nada y es saliendo sueave va mas rapido en el medio y llega mas suave, ease-in va suave al salir y luego mas rapido, ease-out lo contrario y ease-in-out*/
+}
+/*este de abajo movera la clase hijo en el eje x por defecto con el atributo translate, si queremos que lo mueva en el eje y usamos el atributo translateY y si queremos especificar podemos decirle translateX para que sepa que es el eje horizontal*/
+.padre:hover .hijo{
+    transform: translate(100%);
+    background-color: blueviolet;
+
+}

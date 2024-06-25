@@ -1,0 +1,22 @@
+.row div{
+    margin: 0.25rem;
+}
+.col{
+    background-color: cyan;
+}
+.col-sm{
+    background-color: yellow;
+}
+.col-md{
+    background-color: green;
+}
+.col-lg{
+    background-color: blue;
+}
+.col-xl{
+    background-color: red;
+}
+.col-xxl{
+    background-color: pink;
+}
+/*lo que vemos en esta sesion es como se comportan las columnas que estan por debajo de su breakpoint(tamaño de pantalla, que cada una se define para que se comporte en un tamaño determinado y si la pantalla baja de este tamaño, llega a su breakpoint estas columnas se trnaformaran a filas*/

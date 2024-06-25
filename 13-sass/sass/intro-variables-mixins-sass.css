@@ -1,0 +1,69 @@
+@charset "UTF-8";
+.btn {
+  border: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem, 0.5rem;
+  color: #2b2b2b;
+}
+.btn:hover {
+  background-color: cyan;
+  color: #bb1515;
+  cursor: pointer;
+}
+
+/*esto seria para importar otro archivo scss a nuestro archivo principal que seria este, los secundarios es buena practica nombrarlos con un _ al principio para diferenciarlos y asi no los compilaria el compilador, y para usarlos los tendriamos que importar( como en este caso) a el archivo principal que seria este) esto tambien hace que el proyecto sea mas ordenado y escalable*/
+/*a los mixin tambien le podemos pasar parametros como a una funcion, esto nos sirve para cuando sepamos que usaremos un atributo en los diferentes elementos en los que usemos el mixin pero que sea diferente en unos y en otros. y el color que tiene aqui seria el por defecto, por si no le damos ningun parametro al usar el mixin use este color por defecto*/
+/*lo de arriba seria un mixin que nos sirven para reutilizar codigo, supongamos que tenemos dos funciones que comparten la mayoria de los atributos, en vez de poner esas mismas lineas de atributos en cada funcion, creamos un mixin y lo integramos en la funcion con el estilo por defecto que queremos en texto por ejemplo, y podremos añadir mas atributos diferentes a cada uno*/
+/*la de arriba seria una variable en sass asi podemos modificar varios elementos qeu tengan esta variable en sus atributos como vemos abajo con los p y los h*/
+html {
+  padding: 0.5rem;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  background-color: azure;
+  min-height: 100vh;
+  padding: 0.5rem;
+}
+
+/*y abajo podemos ver como se llama a el mixin dentro de las funciones*/
+h1 {
+  margin: 0;
+  width: 50rem;
+  color: #c42929;
+  text-transform: capitalize;
+  background-color: #666666;
+}
+
+p {
+  color: #c42929;
+  width: 50rem;
+  color: #c42929;
+  text-transform: capitalize;
+  background-color: #f1f1f1;
+}
+
+/*en scss existe el concepto de anidacion cosa que en css no, aqui podemos meter elemento que queramos que afecte solo en esa clase y darles atributos por separado, de esta manera es mucho mas facil de leer y mas facil para la maquina tambien, en css seria: div.listo ul li{ 
+    codigo...}*/
+.listado {
+  width: 10rem;
+  background-color: aquamarine;
+  padding: 0.5rem;
+}
+.listado ul {
+  margin: 0.5rem;
+}
+.listado ul li {
+  list-style: none;
+  /*podemos tambine anidar pseudo elemento y pseudo clases con el & y el resto de la sintaxis que vemos abajo(que seria la misma para crear un pesudo elemento fuera de la anidacion, lo unico que cambia en el &*/
+}
+.listado ul li:hover {
+  color: white;
+}
+
+/*y este seria el scss principal en el cual importaremos todos los demas scss, asi estara todo mucho mas ordenado y facil de modificar*//*# sourceMappingURL=intro-variables-mixins-sass.css.map */

@@ -1,0 +1,47 @@
+.color-hexadecimal{
+    color: #C3EB78;
+}
+.color-rgb{
+    color: rgb(200, 300, 400)
+}
+.color-rgba{
+    color: rgba(100, 200, 50, 0.3)
+}
+.fondo{
+    /*background-color: yellow;*/
+    background-image: url(https://t3.ftcdn.net/jpg/00/86/56/12/360_F_86561234_8HJdzg2iBlPap18K38mbyetKfdw1oNrm.jpg);
+}
+/*Tamaños*/
+.ancho {
+    background-color: #C3EB78;
+    width: 100px;
+}
+.alto {
+    background-color: aquamarine;
+    height: 50px;
+}
+/*bordes*/
+.tarjeta{
+    border-style: solid;
+    border-color: rgb(150, 150, 150);
+    border-width: 1px;
+    /*podemos añadir un background en la tarjeta*/
+   
+    /*podemos añadir espacios entre los bordes y el contenido en este caso
+    con el atributo "padding" que da espacio entre objetos por llamarle
+    de alguna forma, y tambien especificar si queremos espacio de arriba
+    p algun lado en especifico*/
+    padding: 20px 10px;
+    /* otras opciones para el paddin:
+    padding: 20;
+    padding: 10px 20px 30px;
+    padding; 10px 30px 50px 40px;
+    padding-top: 200px;
+    en funcion de los valores que le demos ira añadiendo cada valor a un 
+    lado, si son 2 valores seran el primer valor arriba y abajo y el 
+    segundo izquierda y derecha, si son mas ira en direccion de las
+    agujas del reloj
+                                    
+    padding-bottom: 100px;*/       
+  /*border-top: none; */  
+}

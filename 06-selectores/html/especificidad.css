@@ -1,0 +1,18 @@
+#h1-id{
+    color: beige; /*este tiene mayor especificidad(prioridad) que seria el id
+    luego vendria la clase y por ultimo la etiqueta.
+    Hay una manera que tiene mayor especificidad y es 
+   poniendo el estilo como atributo directamente en  
+    el archivo html, lo podemos ver ahi comentado*/
+}
+.h1-class .e{       
+    color: yellow;  
+}
+h1 {
+    color: blue !important; /*si le añadimos esto(!important) luego de el estilo
+    esta pasaria a ser la prioritaria, con mas especificidad que las otras
+    y es la que se mostraria, sin embargo no es buena practica usarlo*/
+}
+p{
+    color:red;
+}

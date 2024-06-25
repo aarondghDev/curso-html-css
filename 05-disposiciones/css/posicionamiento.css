@@ -1,0 +1,52 @@
+div /*al poner "div" le estaos diciendo que afecte
+a todos los divs del documento*/{
+    border: 1px solid gray;
+    /*border: ;aplica bordes a el elemento 
+    creando como una tarjeta*/
+    padding: 5px;
+    /*padding: ;le da espacio dentro de los bordes
+    entre su contenido y los bordes internos*/
+    margin: 5px;
+    /*margin: da espacio entre los bordes externos
+    del "borde" y otros elementos*/
+}
+/*se posiciona en relacion al posicionamiento original*/
+.relative {
+    position: relative;
+    left: 50px;
+}
+/*posicionamiento fijo - se posiciona en relacion a la pantalla, sigue en el
+mismo sitio a si bajemoso subamos o vayamos a la derechao izq*/
+.fixed{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: greenyellow;
+    z-index: 10;
+}
+/*posicionamiento absoluto, va en funcion de un elemento padre en el que esta metido
+nuestro elemento absoluto estara dentro de una div, ques esta dentro
+de otro div y su posicionamiento sera en base a el elemento en el que
+esta metido*/
+.absolute{
+    position: absolute;
+    top: 0px;
+    background-color: blueviolet;
+    top: 80px;
+}
+.relative.contenedor{
+    width: 400px;
+    height: 800px;
+    background-color: blue;
+    left: 500px;
+
+}
+/*al hacer scrol modifica su posicionamiento, quedandose pegado arriba o donde se lo indiquemos*/
+.sticky {
+    position: sticky;
+    background-color: darksalmon;
+    color:white;
+    top: 0px;
+    /*z-index nos sirve para posicionar elementos por encima o por debajo de otros*/
+    z-index: 10;
+}

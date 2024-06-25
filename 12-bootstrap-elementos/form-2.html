@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+   <div class="container pt-4">
+    <form action="">
+        <div class="row">
+        <select class="form-select form-select-sm" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+
+          <select class="form-select mt-3" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+
+          <select class="form-select form-select-lg mt-3" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+<!--esots tres selects de arriba  estan uno pequeño el sig mediano y el ultimo de tamaño grande-->
+<!--este de abajo nos permite seleccionar multiples opciones, esto lo hacemos con la clase "multiple"-->
+          <select multiple class="form-select form-select-sm mt-3" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div>
+            <input class="form-check-input" type="checkbox" id="check"/>
+            <label for="check" class="form-check-label">Estoy de acuerdo con las condiciones</label>
+        </div>
+<!--el de arriba son los check boxes y estos de abajo serian los radio, que en estos solo se puede seleccionar unos, porque tienen el mismo nombre, si tuvieran un nombre(name) distinto pudieramos seleccionar ambos o los que sean mientras tengas distinto nombre, la cosa es que usamos los radios para que escojan una sola opcion, por eso se suelen usar los radios con el mismo name-->
+        <div class="mt-4">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" value="menor de edad" id="radio-menor"/>
+            <label for="radio-menor" class="form-check-label">Soy menor de edad</label>
+        </div>
+        <div class="form-check">    
+            <input class="form-check-input" type="radio" name="flexRadioDefault" value="mayor de edad" id="radio-mayor"/>
+            <label for="radio-mayor" class="form-check-label">Soy mayor de edad</label>
+        </div>
+        </div>
+
+        <div class="row">
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </div>
+        
+        <!--y estos de abajo serian los switch-->
+        <div class="form-check form-switch mt-4">
+            <input
+            type="checkbox"
+            class="form-check-input"
+            id="switch"/>
+            <label for="switch" class="form-check-label">estoy de acuerdo con las condiciones</label>
+        </div>
+
+        <!--tambien podemos modificar el estado de los botones, al hacer click en un y nos de un mensaje positivo o negativo por ejemplo, en estos casos en realidad no son botones, son inputs de tipo radio-->
+        <div class="mt-4">
+            <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+<label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
+
+<input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+<label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
+        </div>
+
+    </form>
+   </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>

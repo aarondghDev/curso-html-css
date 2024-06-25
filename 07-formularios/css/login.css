@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+
+}
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    gap:25px;
+    width: 600px;
+}
+.botones{/*le dimos una clase al div que tiene a los botones dentro para poder modificar donde ponemos los botones ya que al estar dentro de un div hay que darle ciertos atributos a ese div para poder manipular a sus elementos(porque de no estar en el div creo qeu se podria poner estos atributos directamente en la clase de el boton que esta abajo de esta*/
+    align-self: flex-start;
+    display: flex;
+    gap: 20px;
+/*esto de arriba hace que los botones de google y twitter esten uno al lado del otro y que esten en el inicio (lado izquierdo) del container(div)*/
+}
+.google-btn{
+    background-color: #1A73E8;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;/*aqui estariamos centrando el span dentro de el 
+    boton*/
+    padding: 2px;
+    cursor: pointer;
+}
+.google-btn:hover{
+    opacity: 0.8;
+}
+.google-btn picture{
+    width: 35px;
+    background-color: white;
+    height: 35px;
+    display: flex;/*y estos tres atributos que ponemos aqui a partir de esta linea del display es para que la imagen dentro del input este centrada*/
+    align-items: center;
+    justify-content: center;
+}
+.google-btn picture img{/*esto es para cambiar el tamaño de la imagen*/
+    width: 43px;
+    height: 43px;
+}
+.google-btn span{
+    color: white;
+    font-weight: 500;
+    padding: 15px;
+}
+.twitter-btn{
+    color: #bbb;
+    background-color: #eee;
+    border: none;
+    width: 40px;
+    border-bottom: 5px;
+    cursor: pointer;
+}
+.twitter-btn:hover{
+    background-color: #ddd;
+}
+.separator{
+    display: flex;/*este dysplay es para que lp ponga todo en una misma linea*/
+    width: 100%;/*este width es para decirle que ocupe el 100% de la pagina*/
+    gap: 15px;/*esot hace un espacio entre el texto y las lineas*/
+
+}
+.separator hr{
+    flex-grow: 1;/*con esto le decimos que los hr dentro de el div de separator ocupen todo lo maximo que puedan ocupar*/
+    border: none;/*estos dos ultimos son para que no sean dos lines si no una con un estilo mas bonito que el por defecto*/
+    border-top: 1px solid #ccc;
+}
+.separator span{
+    color: #8b8b8b;/*esto es para darle al texto que esa en el separator que tenga una color arecido a las lineas que tiene a sus lados para que se vea mejor*/
+}
+.section-inputs{
+    display: flex;
+    gap: 10px;
+ /*   flex-wrap: wrap;/*esto es para que los input (o elementos que sean)si la pantalla se hace mas pequeña estos se bajen y se vena todos en la pantala a diferencia del "felx-wrap: nowrap;" que pone una scroll vertical para ver todo los elementos(este grap no se si se pueda poner en el container de todos los elemento para que hagan todos los elementos lo mismo, habria que probar)*/
+ width: 100%;
+ flex-wrap: wrap;
+}
+form{/*ya que los inputs estan dentro de la etiqueta "form" les damos un poco de definicion a las posiciones de los elemento dentro e este "form" que ya esta definido y con posicion dentro del div container*/
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 50px;
+
+}
+label{/*este es para darle tamañno a los inputs dentro del "label"*/
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+label span{/*esto es para darl estilo a los "span" dentro de el "label"*/
+    font-weight: 700;
+}
+.section-inputs label input{/*esto es para darle estilo a los inputs( que estan dentro de la etiqueta "lable")*/
+        width: 80%;/*esto es para que los inputs no abarquen toda la pagina sino solo hasta un punto 80% de la pagina en este caso de los inputs username y name*/
+        background-color: #f3f3f4;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        outline: none;
+        font-size: 14pt;
+}
+label input{/*esto es para darle estilo a los inputs( que estan dentro de la etiqueta "lable")*/
+    width: 90%;/*esto es para que los inputs no abarquen toda la pagina sino solo hasta un punto 90% de la pagina en este caso(el resto de los inputs que no son username y name que estan divididos por un div*/
+    background-color: #f3f3f4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14pt;
+    transition: background-color 0.5s, border 5s, box-shadow 5s ;/*con esto le estamos diciendo que al pasarle por encima los colores cambiaran(tendran una transicion ) en x segundos, indicandole a que atributo afectara, en ese caso al background-color y a los bordes y a la sombra de los bordes*/
+}
+label input:hover{
+    background-color: white;
+    border: solid 2px #f3f3f4;
+    box-shadow: 0 0 4px #ab2322;/*esot es para darle sombra a los inputs al pasarles por encima, el primer 0 es del eje x el segundo del y, lo de los px es el grosor y lo ultimo el color de la sombra*/
+
+}
+label input:focus{
+    background-color: white;
+    border: solid 2px #f3f3f4;
+    box-shadow: 0 0 4px #ab2322;/*esot es para darle sombra a los inputs al pasarles por encima, el primer 0 es del eje x el segundo del y, lo de los px es el grosor y lo ultimo el color de la sombra*/
+}
+.checkbox-label{/*esots dos ultimos son para decirle este primero a todos que sena de tipo de dysplay flex y el segundo hace referencia especificamente a el input de tipo checkbox y que tenga un tamaño de x px que lo que hara sera posicionar el checkbox mas hacia la derecha o mas hacia la izq dependiendo de el pxlaje que le pongamos, mientras mal alto el pxlaje mas hacia la derecha y tambien le da mas tamano, osea que si le ponemos el label del input como estamos haciendo en este file de un lado este estaria mas lejos cuanto mas pxselaje tenga el input type checkbox*/
+    display: flex;
+    flex-direction: row;
+}
+.checkbox-label input[type="checkbox"]{
+    width: 20px;
+}
+.checkbox-label span{
+    font-weight: 400;
+}
+.submit-btn{
+    background-color: #ea4c89;
+    color: white;
+    font-weight: 500;
+    font-size: 14pt;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;/*el border radius es para darle curva a las esquinas creo*/
+    cursor: pointer;
+}
+.submit-btn:hover{
+    opacity: 0.8;
+}

@@ -1,0 +1,60 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilos del botón */
+.dropbtn {
+
+    background-color: #4CAF50;
+    color: white;
+    padding: 1px 7px;
+    font-size: 1.5rem;
+    border: solid 1px #4CAF50;
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(247, 249, 249, 0.927);
+        color: #4CAF50;
+    }
+}
+
+/* Estilos del contenido del dropdown (inicialmente oculto) */
+/*.dropdown-content {  //este es un drop down normal, lo dejo aqui por si acaso, el de abajo seria uno fijado qeu ocupa toda la pantalla
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: auto;
+    right: 0; 
+}*/
+.dropdown-content {
+    position: fixed;  /* Hace que el menú desplegable sea fijo en la pantalla */
+    top: 0;           /* Alinea el menú en la parte superior de la pantalla */
+    left: 0;          /* Ajusta la posición del menú en el borde izquierdo de la pantalla */
+    width: 100%;      /* Establece el ancho del menú desplegable al 100% de la pantalla */
+    background-color: #f9f9f9; /* Opcional: establece el color de fondo del menú */
+    padding: 15px;    /* Opcional: agrega relleno al menú desplegable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Opcional: agrega una sombra al menú */
+}
+/* Estilos de los enlaces dentro del dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Cambiar el color de fondo cuando se pasa el ratón sobre un enlace */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mostrar el contenido del dropdown cuando se pasa el ratón sobre el botón */
+.dropdown:hover .dropdown-content {
+    display: block;
+}

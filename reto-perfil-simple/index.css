@@ -1,0 +1,366 @@
+/* .perfil {
+    display: flex;
+    background-color: black;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+} */
+html {
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    margin: 0;
+    background-color: rgb(238, 234, 228);
+}
+h1 {
+    margin: 0;
+}
+
+.banner-stick {
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    background-color: rgb(59, 136, 253);
+    /* flex-direction: column; */
+    justify-content: space-between;
+    /* justify-content: center; */
+    height: 4rem;
+    width: 100%;
+    box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.img-g {
+    height: 2rem;
+    width: 2rem;
+    color: white;
+
+}
+
+.izq {
+    display: flex;
+    /* flex-wrap: nowrap; */
+    width: 12.5rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+.text-banner {
+    /* text-decoration: none;     */
+    color: black;
+    font-size: 1.7rem;
+    font-weight: 200;
+}
+
+.menu-btn {
+    cursor: pointer;
+    border: none;
+    background-color: rgb(59, 136, 253);
+}
+
+.der {
+    padding-right: 20px;
+    display: flex;
+    width: 16rem;
+    /* flex-wrap: nowrap; */
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img-p {
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+}
+
+/* .padding {
+    padding: 10px;
+} */
+
+a:hover {
+    /* color: white; */
+    /* box-shadow: inset 2px 3px 4px rgba(130, 29, 29, 0.3);  */
+    transform: scale(1.1); /* Aumentar ligeramente el tamaño */
+    transition: all 0.5s ease; /* Agregar una transición suave */
+    cursor: pointer;
+}
+button:hover {
+        /* color: white; */
+    /* box-shadow: inset 2px 3px 4px rgba(130, 29, 29, 0.3);  */
+    transform: scale(1.1); /* Aumentar ligeramente el tamaño */
+    transition: all 0.5s ease; /* Agregar una transición suave */
+    cursor: pointer;
+}
+
+.texto-gen {
+    font-size: 1rem;
+    /* margin: 0;
+    line-height: 1.5;  */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.background {
+    display: flex; 
+    /* justify-content: top; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(59, 136, 253);
+    /* width: 100%; */
+    height: 22.5rem;
+}
+
+.titulo-pstion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+.titulo-style {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0; /* Eliminar el margen predeterminado del h1 */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.texto-sup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Ajustar el espacio entre los elementos */
+}
+
+.titulo-style {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.caja1 {
+    padding-top: 10px;
+    top: 6rem;
+    position: absolute;
+    height: 20rem;
+    width: 100%;
+    /* background-color: rgb(214, 179, 179); */
+}
+
+.contenedor-cajas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* width: 100%; */
+    /* background-color: rebeccapurple; */
+    /* height: 50rem; */
+}
+
+.principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    background-color: white;
+    background-image: url("https://img.freepik.com/vector-gratis/noche-oceano-paisaje-luna-llena-estrellas-brillan_107791-7397.jpg");
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 18rem;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.elemento-principal img {
+    margin: 15px;
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid rgb(92, 81, 81);
+    border-radius: 70px;
+    box-shadow: -1px -1px 20px 7px rgba(0, 0, 0, 0.5);
+}
+
+.elemento-principal {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: aquamarine; */
+
+}
+
+.btn {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 7rem;
+    background-color: white;
+    border: 0px solid rgb(224, 216, 229) ;
+    border-radius: 10px;
+    /* box-shadow: 2px 3px 4px rgba(130, 29, 29, 0.3); */
+    transition: 0.1s;
+}
+
+.btn:hover  {
+    border: 1px solid rgb(224, 216, 229);
+    border-radius: 10px;
+    transform: none;
+    /* background-color: rgb(78, 89, 230); */
+    color: rgb(6, 6, 8);
+    transition: 1s;
+}
+.btn:active{
+    transition: 0.1s;
+    box-shadow: inset 2px 3px 4px rgba(130, 29, 29, 0.3);
+}
+
+@media (max-width: 600px) {
+    .banner-stick {
+        
+    }
+}
+
+.segunda-linea {
+    margin-top: 5px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    width: 50%;
+    height: 10rem;
+}
+
+.pl {
+    margin-left: 5px;
+}
+
+.posicion-sl {
+    background-color: white;
+    width: 50%;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+.tercera-linea {
+    margin-top: 5px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+
+    width: 50%;
+    height: 10rem;
+}
+
+.linea-separadora {
+    border: none;
+    border-top: 0.5px solid rgb(154, 149, 149); /* Define el estilo de la línea */
+    margin-top: 5px; /* Ajusta el margen superior según sea necesario */
+}
+
+.contenedor {
+    height: 57rem;
+    min-height: 80vh; /* Para asegurarse de que el contenedor ocupe al menos toda la altura de la ventana del navegador */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.abajo {
+    /* display: flex;
+    justify-content: space-around; 
+    align-items: center;  */
+
+    height: 7.5rem;
+    /* margin: auto; */
+    background-color: rgb(202, 191, 191);
+    bottom: 10px;
+}
+
+footer hr {
+    width: 95vw;
+    margin: 0; /* Elimina cualquier margen predeterminado */
+    border: none; /* Elimina cualquier borde predeterminado */
+    border-top: 1px solid rgb(53, 14, 14); /* Añade un borde superior para que el hr sea visible */
+}
+
+.f {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.f-1 {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 10px;
+    display: flex;
+    /* width: 30rem; */
+    flex-direction: row;
+}
+.E-texto {
+    padding: 20px 0px 10px 20px;
+    margin: 0;
+    /* justify-content: center; */
+}
+
+.h2-gen-cajas {
+    font-size: 1.5rem;
+    /* margin: 0;
+    line-height: 1.5;  */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text-gen-cajas {
+    padding-left: 5px;
+    font-size: 1.05rem;
+    /* margin: 0;
+    line-height: 1.5;  */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.elementos-d{
+    padding-left: 5px;
+}
+
+.parte-abajo {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    /* justify-content: center; */
+    padding-left: 5px;
+    color: rgb(224, 42, 42);
+}
+
+.btn2 {
+    margin: 10px 0px 0px 20px;
+
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    border: 0px solid rgb(224, 216, 229) ;
+    border-radius: 10px;
+    /* box-shadow: 2px 3px 4px rgba(130, 29, 29, 0.3); */
+    transition: 0.1s;
+}
+
+.btn2:hover  {
+    border: 1px solid rgb(224, 216, 229);
+    border-radius: 10px;
+    transform: none;
+    /* background-color: rgb(78, 89, 230); */
+    color: rgb(6, 6, 8);
+    transition: 1s;
+}
+.btn2:active{
+    transition: 0.1s;
+    box-shadow: inset 2px 3px 4px rgba(130, 29, 29, 0.3);
+}
+
+.arriba-p {
+    display: flex;
+    flex-direction: row;
+
+}

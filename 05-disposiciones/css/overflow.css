@@ -1,0 +1,35 @@
+/*hidden-oculta el texto sobresaliente*/
+.contenedor-hidden{
+    background-color: bisque;
+    width: 300px;
+    height: 150px;
+    overflow: hidden;
+}
+/*scroll-pone barra para scrolear y ver todo el texto*/
+.contenedor-scroll{
+    background-color: bisque;
+    width: 300px;
+    height: 150px;
+    overflow: scroll;
+   /* overflow-x: hidden;
+      overflow-y: scroll;
+      es para los ejes x, y (horizontal y vertical) uno tiene que estar
+      hidden y el otro scroll, esto es por si queremos mostrar solo una
+      barra de scroll*/
+}
+/*visible- es el por defecto y se ve el texto sobresaliente*/
+.contenedor-visible{
+    background-color: bisque;
+    width: 300px;
+    height: 150px;
+    overflow: visible;
+}
+/*auto- es parecido al scroll pero este pone solo la barra de scroll que 
+haga falta, a diferencia de el scroll que pone las dos por defecto si no
+se la especificamos*/
+.contenedor-auto{
+    background-color: bisque;
+    width: 300px;
+    height: 150px;
+    overflow: auto;
+}

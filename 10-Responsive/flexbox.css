@@ -1,0 +1,23 @@
+/* https://codepen.io/enxaneta/full/adLPwv/ es un sitio para practicar las disposiciones de la flexbox*/
+.contenedor{
+    background-color: yellow;
+    padding: 0.5rem;
+    display: flex;
+    /*lo que hace el display flex es hacer que los elemento que tiene dentro ocupen lo minimo posible, en este caso estan en una sola linea todos los elementos de el contenedor pero si quitaramos el display flex cada elemento ocuparia una linea entera en el eje x*/
+    gap: 0.5rem;/* el gap lo aplicamos en el contenedor para que le de un espacio entre los elementos que tiene dentro*/
+    min-height: 5rem;
+    /*recordar que align-items: flex-start; es para el eje Y vertical y el justify-content: flex-end; es el eje x. Y los elementos de este contenedor ocuparian solo una parte de la linea que necesiten en el eje x pero en el eje y por defecto ocupan todo el contenedor dependiendo de su height, esto se cambia con los atributos que estan en el principio de este comentario, esto podria ser al reves cambiandolo con el atributo "flex-direction: column;" por defecto viene "row"*/
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+.item{
+    background-color: salmon;
+    padding: 0.25rem;/*y el padding se lo aplicamos a los elementos para que tengan un padding con respecto a su contenedor*/
+    width: 10rem;/*si le damos un tamaño a los elementos, este al ser en unidades rem se ira acoplando al tamaño de la pantalla si se hace mas pequeña de la medida que le dimos pero al hacerse mas grande llegara a el tamaño que le dijimos y se quedara en ese tamaño asi la pantalla se haga mas grande*/
+}
+.item2{
+    align-self: stretch;/*esto seria para posicionar uno de los elementos, usamos el aling igual pero en vez de items usamos el self para referirnos que es solo a ese elemento, el igual con el justify-content, seria justify-self*/
+
+}

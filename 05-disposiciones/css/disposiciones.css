@@ -1,0 +1,27 @@
+.div-1, .div-2{
+    background-color: red;
+    /*display: block; por defecto los div tienen un display de bloque 
+    que se puede decir que se agarran toda una linea para sus elementos,
+    asi no la necesiten entera*/
+    
+}
+.span-1{
+    background-color: aquamarine;
+    /*display: inline; por defecto span tiene un display "inline", que se puede decir
+    que no tomara toda una linea para el sino solo el espacio que necesite
+    */
+}
+.span-2{
+    background-color: aquamarine;
+    float: right;
+    /*el atributo "float" nos permite decirle donde queremos nuestro elemento, "span" en
+     este caso y se usa mas que nada para los elementos con display "inline"
+     hay una mejor manera de mover de sitio estos elementos inline pero
+     es bueno conocerla*/
+}
+.img{
+    height: 70px;
+    width: 70px;
+/* disply:inline-block; por defecto los img tienen undisplay de inline block
+que nos permite poder trabjar con los tamañps a diferencia de los inline, width y heigth*/
+}

@@ -1,0 +1,46 @@
+.contenedor{
+    width: 300px;
+    height: 100px;
+    background-color: aquamarine;
+}
+span.frase{
+    font-style: italic;
+}
+span.frase::before{
+    content: '<<';
+    font-size: xx-small;
+}                   /* los pseudoelementos "before" y "after" se suelen usar
+en conjunto ya que uno indica el comienzo y el otro el final, en este
+caso del contenido, que le indicamos a travez de el atributo "content" 
+que hace referencia a que pondra los << antes y >> despues del contenido
+dentro del span*/
+span.frase::after{
+    content: '>>';
+    font-size: x-small;/*el atributo "font-size" se usa para cambiar el 
+    tamaño de las letras, y el "font" tiene muchos otros tipos para 
+    darle estilos a las letras*/
+}
+.libro{
+    background-color:bisque;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.libro p::first-letter{
+    font-size: xx-large;
+}                       /*puede ir sin la p luego de ".libro" es para
+especificar que afectara a todos los "<p>" dentro de esa clases*/
+.libro ::first-line{
+    color: white;
+}
+.libro p::selection{/*afectara a los que seleccionemos con el clic izq
+    y pasar por encima de algo, cambiara en este caso el fondo y el color
+    de las letras*/
+    background-color: chocolate;
+    color: lime;
+}
+.listado li::marker{/*el "li" que esta despues de la clase es para
+    indicar que afecte a todos los "li" dentro de esata clase, pudieramos
+    indicar antes del "li" un "ol" si queremos que afecte solo a la 
+    lista ordenada o un"ul" si queremos que afecte solo a la desordenada*/
+    color: red;
+}

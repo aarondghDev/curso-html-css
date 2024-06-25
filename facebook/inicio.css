@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(217, 212, 212);
+}
+.barra-superior{
+    background-color: #235789;
+    height: 100px;
+    width: 100vw;
+}
+.logof{
+    background-color: #235789;
+    position: absolute;
+    font-size: 300%;
+    color: white;
+    left: 30px;
+    top: 35px;
+}
+.usuario-letras{
+    background-color: #235789;
+    position: absolute;
+    right: 250px;
+    top: 30px;
+    color: white;
+}
+.usuario-box{
+    background-color: white;
+    position: absolute;
+    right: 267px;
+    top: 50px;
+}
+.clave{
+    background-color: #235789;
+    position: absolute;
+    right: 140px;
+    top: 30px;
+    color: white;
+}
+.clave-box{
+    background-color: white;
+    position: absolute;
+    right: 45px;
+    top: 50px;
+}
+.registro{
+    /*position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column;*/
+    position: absolute;
+    right: 50px;
+    width: 50%;
+    height: 50%;
+    padding: 0;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: flex-start;
+    margin: 0;
+    background-color: red;
+    /*right: 0px;*/
+}
+.nombre-box{
+    position: relative;
+    width: 50px;
+}
+.registrarte{
+    position: relative;
+    background-color: red;
+
+
+
+}
+span{
+    position: relative;
+    left: 55px;
+    top: 30px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipografia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container py-4">
+        <h1>Esto es un h1</h1>
+        <h2>Esto es un h2</h2>
+        <h3>Esto es un h3</h3>
+        <h4>Esto es un h4</h4>
+        <h5>Esto es un h5</h5>
+        <h6>Esto es un h6</h6>
+<!--podemos usar el estilo de los h en un p por ejemplo, esto viene bien cuando queremos que tenga estilo de heading pero que no afecte al seo-->
+        <p class="h1">Esta es una <span class="text-muted">clase h1</span></p><!--la clase text-muted lo que hara es darle un color mas opaco a el texto y quitarle protagonismo-->
+        <p class="h2">Esta es una <small class="text-muted"> clase h2</small></p><!--esta etiqueta small nos sirve para hacer mas pequeño el texto y quitarle protagonismo, se puede complementar con la clase text-muted pero no es obligatorio(esta etiqueta y clase "small" y"text-muted" se pueden usar tanto en <p> como en <h>(1, 2, 3, etc))-->
+        <p class="h3">Esta es una clase h3</p>
+        <p class="h4">Esta es una clase h4</p>
+        <p class="h5">Esta es una clase h5</p>
+        <p class="h6">Esta es una clase h6</p>
+<!--estas de abajo serian una clase con un estilo de texto mas grande y letras mas finas-->
+        <h1 class="display-1">Display 1</h1>
+        <h1 class="display-2">Display 2</h1>
+        <h1 class="display-3">Display 3</h1>
+        <h1 class="display-4">Display 4</h1>
+        <h1 class="display-5">Display 5</h1>
+        <h1 class="display-6">Display 6</h1>
+<!--si queremos darle mas protagonismo a una parte de un texto podemos usar la clase "lead". el tag <mark> nos va asubrayar. el <del> nos va a tachar el texto. hay muchas tags que podemos implementar para dar ciertos estilos al texto, ver todad en bootstrap en la parte de typografy-->
+        <p class="lead">Lorem <mark>ipsum dolor sit</mark> amet consectetur adipisicing elit. Corporis cum eum ipsam amet vel. </p>
+        <p>Amet alias <del>repellat nostrum quidem voluptate voluptas perferendis dolor</del>, nemo optio fugiat tenetur vel doloremque Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium est, cum</p>
+<!--podemos tener un parrafo con una lista que queremos que sea una lista sencilla sin tanta cosa, para ello usamos la clase "list-unstyled"-->
+        <p>
+            Este es un parrafo donde vamos a tener una lista simple
+            <ul class="list-unstyled">
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+            </ul>
+        </p>
+<!--tambien podemos queres que la lista este en horizontal y no en vertical, para ello usamos la clase "list-inline" en el <ul> y "list-inline-item" en los <li>-->
+        <p>
+            Este es un parrafo donde vamos a tener una lista en linea
+            <ul class="list-inline">
+                <li class="list-inline-item">Elemento 1</li>
+                <li class="list-inline-item">Elemento 2</li>
+                <li class="list-inline-item">Elemento 3</li>
+            </ul>
+        </p>
+<!--tambien podemos decir en que lugar de la pagina queremos el texto con las clases "text-end" "text-start" y "text-center"-->
+        <p class="text-end">este es un texto al final</p>
+        <p class="text-center">este es un texto al inicio</p>
+        <p class="text-start">este es un texto al centro</p>
+<!--tambien tenemos la posibilidad de decirle que este en el final por ejemplo pero si la pantalla se hace mas pequeña que se ponga en el centro, o al inicio o como lo queramos dependeindo de las necesidades y lo que queremos-->
+        <p class="text-sm-end text-lg-center text-md-start">este es un texto que cambia de lugar en funcion de el tamaño de la pagina (responsive)</p>
+<!--podemos darle un tamaño a un parrafo y decirle si queremos que sea wrap o nowrap si el texto excede el tamaño que le dimos-->
+        <p class="w-25 text-nowrap bg-light">Este es un taxto muy largo etc</p>
+<!--tambien podmos tener un parrafo con mucho texto, que por defecto hara mas ancha la pantalla y tendremos que hacer scroll horizontal, para que no pase esto podemos usar la clase "text-break" que hace que el texto pase a la sig linea cuando llegue al borde de la pagina-->
+        <p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
+<!--tambien podemos usar las clases para tener todo el texto en mayusculas, en minusculas o la primera letra de el texto en mayuscula, con las clases de abajo-->
+        <p class="text-lowercase">Texto en minusculas</p>
+        <p class="text-uppercase">Texto en mayusculas</p>
+        <p class="text-capitalize">Texto en capitalizado</p>
+<!--tambien podemos modificar el tamaño de la fuente(las letras) con las siguientes clases. Tambien le podemos cambiar el peso(wheight) a las letras con la clse fw, abajo dejo unas de las clases pero hay mas, ver en bootstrap-->
+        <p class="fs-1 fw-bold">fs-1 (tamaño de fuente(letras))</p>
+        <p class="fs-2 fw-bolder">fs-2 (tamaño de fuente(letras))</p>
+        <p class="fs-3 fw-light">fs-3 (tamaño de fuente(letras))</p>
+        <p class="fs-4">fs-4 (tamaño de fuente(letras))</p>
+        <p class="fs-5">fs-5 (tamaño de fuente(letras))</p>
+        <p class="fs-6">fs-6 (tamaño de fuente(letras))</p>
+<!--a los enlaces le podemos quitar el subrayado y el color azul que le viene por defecto con las sig clases (ojo poner un enlace sin subrayado y sin color es una mala practica ya que no se sabria que es un enlace)-->
+        <a href="#">Enlace normal</a>
+        <a href="#" class="text-decoration-none">Enlace sin subrayado</a>
+        <a href="#" class="text-reset">Enlace sin color</a>
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>

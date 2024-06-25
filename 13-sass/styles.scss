@@ -1,0 +1,16 @@
+//componentes
+@use "sass/componentes" as comp;
+//namespace
+//$color->comp.$color   el use crea un namespace para las variable de el archivo, esto nos sirve por si tenemos el mismo nombre en otro archivo y queremos usarlo en un tercero el segundo sobreescribiria al primero, para ello el use cre un nombre para la variable de este archivo, que podemos modificar con el "as", sin el "as" quedaria componentes.$color 
+
+/*esto seria para importar otro archivo scss a nuestro archivo principal que seria este, los secundarios es buena practica nombrarlos con un _ al principio para diferenciarlos y asi no los compilaria el compilador, y para usarlos los tendriamos que importar( como en este caso) a el archivo principal que seria este) esto tambien hace que el proyecto sea mas ordenado y escalable. Esto lo modifique, esta explicacion es para el import lo que voy a explicar ahora seria para el "use" y si queremos ver mas sobre el use ver en el cuaderno*/
+//mixins
+@use "sass/mixins";
+//namespace
+//$color-> mixins.$color. Tambien podemos poner "as *" para que cree un nombre global para la variable que seria el mismo nombre que le hemos dado con el $ ->$color, pero esto no es recomendable, por eso usamos el use y no el import que seria lo que haria el import
+//Estilos
+@use "sass/estilos";
+
+/*y este seria el scss principal en el cual importaremos todos los demas scss, asi estara todo mucho mas ordenado y facil de modificar*/
+//otros
+@use "sass/built";

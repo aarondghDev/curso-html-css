@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pseudo clases</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .hover{
+            width: 300px;
+            height: 100px;
+            background-color: bisque;
+        }
+        .hover:hover{/*esta serai la sintaxis para gregar pseudoclases, y hover
+            es una de las mas utilizadas, entonces seria la clas, seguida
+            de dos puntos y la pseudoclase que queramos, "hover" en este caso*/
+            background-color: burlywood;
+        }
+        .listado{
+            padding: 15px;
+            background-color: aquamarine;
+        }
+        .listado p:first-child{/*esta pseudoclase va a alterar al primer elemento
+            de tipo <p> que tenga la clase listado, en este caso afectara al primer
+            elemento de tipo <p> de el div en el qeu esta que es el qeu tiene la
+            clase con la pseudoclase*/
+                color: white;
+        }
+        a:link{/*esta pseudoclase "link" se usa para los <a> que no hemos visitado*/
+            color:deeppink;
+        }
+        a:visited{/*esta psudoclase "visited" se usa para los links que si hemos
+            visitado*/
+            color: crimsonS;
+        }
+        a:hover{
+            color: pink;
+        }
+        a:active{/*se activa al hacer click*/
+            color: greenyellow;
+        }
+        /*es importante mantener este orden ya que si no los estilo se pisaran
+        entre si*/
+        /*w3school.com/css/css_pseudo_classes.asp pagina qeu tiene todas las
+        pseudoclases de css*/
+
+    </style>
+</head>
+<body>
+    <div class="hover">
+        <p>erunt dolore, culpa repudiandae numquam blanditiis,
+           nemo corrupti vel!</p>
+        </div>
+        <div class="listado">
+            <p>parrafo 1</p>
+            <p>parrafo 2</p>
+            <p>parrafo 3</p>
+        </div>
+        <div class="enlaces">
+            <a href="https://google.com" target="_blank"> Enlace a google</a>
+            <!--el atributo "target" nos sirve para redireccionar a el link
+            y no que nos lo abra en nuestra misma pestaña si no
+            a una nueva-->
+            <a href="https://marca.com" target="_blank"> Enlace a Marca</a>
+        </div>
+</body>
+</html>

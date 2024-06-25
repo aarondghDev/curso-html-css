@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container pt-4">
+        <form>
+            <div class="mb-3"><!--el id en el label lo ponemos en el input para que al hacer click en el label "introduce tu nombre"nos ponga en el input directamente-->
+                <label class="form-label" for="nombre">Introduce tu nombre</label>
+                <!--aqui abajo en el tag input vemos que al final tiene un disabled, este lo que hace es desabilitar el input, si queremos que se desabilite por alguna razon, porque no esta marcada la casilla del check box por ejemplo-->
+                <input id="nombre" type="text" class="form-control" placeholder="Tu nombre" disabled/>
+                <div class="form-text">Introduce tu nombre de pila</div>
+            </div>
+            <!--esto de abajo seria un check box en cual por defecto aparece checked por la clase que le dimos en el tag input checked-->
+            <div class="mb-3">
+                <input type="checkbox" id="check-mayor-edad" class="form-check-input" checked/>
+                <label class="form-check-label" for="check-mayor-edad">Eres mayor de edad?</label>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" value="gorka" readonly><!--el readonly nos sirve para que puedan copiar texto de el input pero no modificarlo. y el form-control-lg es para cambiarle el tamaño a el input, podemos ver las clases para modificar esto en la seccion de "form control" en la pagina de forms de bootstrap-->
+              <div id="emailHelp" class="form-text" >We'll never share your email with anyone else.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleDataList" class="form-label">Datalist example</label>
+                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                <datalist id="datalistOptions">
+                    <option value="San Francisco">
+                    <option value="New York">
+                    <option value="Seattle">
+                    <option value="Los Angeles">
+                    <option value="Chicago">
+                </datalist>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>

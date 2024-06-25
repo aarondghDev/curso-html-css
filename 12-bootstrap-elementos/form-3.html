@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<div class="container pt-4 ">
+    <form action="">
+        <!--rango/range-->
+        <label for="rango">selecciona el rango</label>
+        <!--el input de abajo seria un rango para escoger una cantidad y le podemos decir el rango(por defecto es de 0 a 100, pero con los atributos "min" y "max" le podemos decir el rango que queramos poner a elegir) la clase seria para darle estilo de bootstrap. El atributo "step" lo que hara es determinar de cuanto en cuanto ira subiendo y bajando, por defecto seria de 1 en 1 -->
+        <input id="rango" type="range" class="form-range" value="5" min="0" max="10" step="0.1"/>
+
+        <!--input group- son inputs que nos dan mas informacion acerca de lo que tenemos que introducir-->
+        <div class="input-group mb-4">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control"/>
+        </div>
+        <!--le podemos decir el width con w-50 que el 50 seria en porcentaje, o cualquier otro numero sera representado en porcentaje-->
+        <label for="email">Intoduce tu email</label>
+            <div class="input-group w-50">
+                <input type="text" class="form-control" placeholder="username"/>
+                <span class="input-group-text">@gmail.com</span>
+            </div>
+            <label for="email">Intoduce tu email</label>
+
+            <div class="input-group input-group-lg w-100 flex-nowrap">
+                <input type="text" class="form-control" placeholder="username"/>
+                <span class="input-group-text">@gmail.com</span>
+            </div>
+<!--este de abajo seria para integrar un checkbox dentro de el input-->
+            <div class="input-group mb-3 mt-3">
+                <div class="input-group-text">
+                  <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                </div>
+                <input type="text" class="form-control" aria-label="Text input with checkbox">
+              </div>
+<!--este de abajo seria una buena manera de colocar dos inputs en una misma linea usando el input-group-->
+              <div class="input-group mb-3">
+                <div class="input-group-text">
+                  <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input"/>
+                </div>
+                <input type="text" class="form-control" name="Nombre" placeholder="Tu nombre"/>
+                <input type="text" class="form-control" name="Apellido" placeholder="Tu apellido"/>
+              </div>
+<!--al igual que podemos poner checkboxes en un input podemos poner botones (uno de busqueda por ejemplo)-->
+              <div class="input-group">
+                <input type="text" placeholder="Haz tu busqueda" class="form-control"/>
+                <button class="btn btn-outline-secondary ">Buscar</button>
+                </div>
+<!--podemos decirle tambien que sea un boton con dropdown-->    
+                <div class="input-group mt-4 mb-4">
+                    <input type="text" placeholder="Haz tu busqueda" class="form-control"/>
+                    <button class="btn
+                    btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">Buscar</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">bing</a></li>
+                        <li><a class="dropdown-item" href="#">google</a></li>
+                        <li><a class="dropdown-item" href="#">yahoo</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">otro buscador</a></li>
+                      </ul>
+                </div>
+<!--floating label- es un estilo que se puso de moda con google con el material design, es un input que tiene un label y cuando nos ponemos en el input, el label pasa a ser mas pequeño y sube y se ve mas el texto que metamos en el input-->
+<!--dato adicional, para que esta funcionalidad se aplique tiene que tener un placeholder(el input), que no se muestra pero es lo que hace que por debajo, con javascript se haga la transicion de poner el label mas pequeño al hacer click en el input-->
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="text-nombre" placeholder="Tu nombre"/>
+                    <label class="form-text" for="text-nombre">Tu nombre</label>
+                </div>
+            </div>
+    </form>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>

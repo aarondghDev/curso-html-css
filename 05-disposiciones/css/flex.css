@@ -1,0 +1,31 @@
+.flex{ /*esta clase la usaremos como contenedor para aplicar los estilos en los elementos que esten dentro de la etiqueta*/
+    display: flex;
+    background-color: blue;
+    height: 500px;
+    /*flex-direction: column; con esta linea le decimos que los elementos dentro de este contenedor esten en columna*/
+
+    /*justify-content es para definir donde queremos del eje horizontal "x"
+    las cajas*/
+    justify-content: space-around;
+    /*align-items es para definir donde queremos del eje
+    vertical "y" las cajas*/
+    align-items: stretch;
+}
+.contenido-1{
+    background-color: white;
+    height: 200px;
+    width: 100px;
+    border: 1px solid blue;
+}
+.contenido-2{
+    background-color: white; 
+    height: 200px;
+    width: 100px;
+    border: 1px solid blue;
+}
+.contenido-3{
+    background-color: white;
+    height: 200px;
+    width: 100px;
+    border: 1px solid blue;
+}

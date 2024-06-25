@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilidades CSS</title>
+    <link rel="stylesheet" href="estilos.css"/>
+    <!-- este "link" de abajo es de una pagina externa que brinda diferentes estilos a nuestra pagina, se llama "purecss"-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"/>
+    <!-- abajo tenemos otra forma de introducir estilos directamente desde nuestro archivo html-->
+    <!--este de abajo (html{padding...}) es para darle margen a la pagina y que el escrito no este tan al borde de la pantalla-->
+    <style>
+        html{
+            padding: 15px;
+        }
+        p{
+            color: red;
+        }
+    </style>
+</head>
+<body> 
+    <p>hola</p>
+    <!--el boton de abajo sacamos el estilo de una pagina que con el link del head ya podemos usar los estilos de esa pagina y para este estilo de boton usamos la clase que nos sale en la parte de botones de la pagina-->
+    <button class="pure-button">Boton personalizados con fuente externa</button>
+    <button style="padding: 10px; border: none; border-radius: 10px;">Boton personalizado</button>
+</body>
+</html>

@@ -1,0 +1,31 @@
+ /* esto se usa para quitar el margen y el padding que viene
+ por defecto en las paginas*/
+ *{
+    margin: 0;
+    padding: 0;
+ }
+ .imagen-principal{
+    width: 100vw;/* vw - se usa para darle tamaño que cubra toda la pantalla
+    es una unidad de medida*/
+    opacity: 0.5;
+ }
+ /*el "hover" indica que tomara ciertos atributos cuando pasemos por encima 
+ con el cursor*/
+ .imagen-principal:hover{
+    opacity: 1;
+ }
+ .imagen-galeria{
+    width: 200px;
+ }
+ .galeria{
+    display: flex;/*homogeniza las imagenes para que se vean mejor*/
+    flex-wrap: wrap;/*hace que no siga en una linea si no que si hay
+    muchos elementos los ira bajando si no entran en la pagina
+    asi no hay que scroleat hacia la izquierda*/
+    gap:15px;/*da espacio entre las imagenes*/
+ }
+ .imagen-galeria:hover{
+    opacity: 0.3;
+    cursor: pointer;/*hace que el cursor se ponga como si fuera a 
+    seleccionar un enlace cuando pase por encima de la imagen*/
+ }

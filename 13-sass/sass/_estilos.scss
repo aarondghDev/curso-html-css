@@ -1,0 +1,43 @@
+@use "mixins"; //ahora para importar los estilos y las variable("formato-texto" y "text-color") de el archivo de _mixins.scss usamos el @use seguido de el nombre de el archivo sin el _ ni el .scss, y las variables las tenemos que nombrar por su namesapce que se crea a partir de el uso de el use
+html{
+    padding: 0.5rem;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 100%;
+    background-color: #d11b1b;
+    min-height: 100vh;
+    padding: 0.5rem;
+}
+/*y abajo podemos ver como se llama a el mixin dentro de las funciones*/
+h1{
+    margin: 0;
+    @include mixins.formato-texto(#666666);
+}
+
+p{
+    color: mixins.$text-color;
+    @include mixins.formato-texto();
+}
+/*en scss existe el concepto de anidacion cosa que en css no, aqui podemos meter elemento que queramos que afecte solo en esa clase y darles atributos por separado, de esta manera es mucho mas facil de leer y mas facil para la maquina tambien, en css seria: div.listo ul li{ 
+    codigo...}*/
+.listado{
+    width: 10rem;
+    background-color: aquamarine;
+    padding: 0.5rem;
+
+    ul{
+        margin: 0.5rem;
+
+        li{
+            list-style: none;
+/*podemos tambine anidar pseudo elemento y pseudo clases con el & y el resto de la sintaxis que vemos abajo(que seria la misma para crear un pesudo elemento fuera de la anidacion, lo unico que cambia en el &*/
+            &:hover{
+                color: white;
+            }
+        }
+    }
+}

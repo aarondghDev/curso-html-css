@@ -1,0 +1,50 @@
+.padre{
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+}
+.hijo{
+    width: 50%;
+    height: 50%;
+    background-color: beige;/*si queremos que la animacion se corra sin hacer over sobre el elemento simplemente la ponemos en la clase del elemento y esta correra siempre, la podemos frenar al hacer hover, ver codigo del hover*/
+    animation: traslacion 2s ease-in-out infinite forwards alternate
+}
+.padre:hover .hijo{
+    /*con la animacion tenemos que crear como una clase en la cual le daremostodos los cambios que queremos y esta clase seria la palabra traslacion que la agregamos como un atributo a el atributo animacion, esta clase seria una keyframes que la crearemos a continuacion, el tiempo de transicion si se indica en el atributo animation como vemos abajo*/
+    /*animation: traslacion 2s ease-in-out 2 forwards alternate/*este atributo forwards es para que mantenga su estado final, sin este atributo vuelve a su estado originaly el numero de 2 es para indicar el numero de veces que queremos que se corra esta animacion(si usamos la plabra "infinite" en vez de un numero lo hara de manera infinita; el atributo alternate lo que hace es que alterna la transicion de la animacion, que vaya primero al 100% y luego baje al 0%*/
+    animation-play-state: paused;/*con este le estariamos diciendo que se pare la animacion cuando hacemos hover sobre el elemento*/
+}
+@keyframes traslacion{
+   /* 0%{
+        background-color: beige;
+        transform: translateX(0%);/*con este le estamos diciendo que se mueva en el eje x horizontal
+    }
+    50%{
+        background-color: #red;
+        transform: translateX(10%) translateY(50%);
+    }
+    100%{
+        background-color: darkorange;
+        transform: translateX(100%);
+
+    }*/
+    0%{
+        background-color: beige;
+        transform: translateX(0%) translateY(0%);
+    }
+    25%{
+        transform: translateX(100%) translateY(0%);
+    }
+    50%{
+        transform: translateX(100%) translateY(100%);
+    }
+    75%{
+        transform: translateX(0%) translateY(100%);
+    }
+    100%{
+        background-color: orange;
+        transform: translateX(0%) translateY(0%);
+    }
+
+
+}

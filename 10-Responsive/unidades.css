@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 20;
+}
+/*con esta clase escenario estamos optimizando el codigo ya que usamos la clase escenario para dar estilos fijo a varios elemento y usamos otras clases para cambiar ciertos atributos de los elementos por separado pero ya tienen una serie de estilos con la clase escenario*/
+.escenario{
+    margin: 10px 0px;/*recordar, el primer numero es arriba y abajo el segundo los laterales (si hubieran tres numeros seria el primero arriba el segundo laterales y el tercero abajo; y si hubieran 4 van en las agujas del reloj empezando por arriba */
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.escenario-1{
+    width: 100%;
+}
+.escenario-2{
+    width: 50%;
+}
+.px{/*los pixeles no cambian su tamaño en funcion de un elemento padre(como en este caso que esta dentro de un div con un tamaño especifico)*/
+    background-color: green;
+    width: 200px;
+}
+.porcentaje{/*el porcentaje si toma con referencia el tamaño de su elemento padre para tomar un tamaño (como en este caso que esta dentro de un div con un tamaño especifico tomara el porcentaje de el espacio de su elemento padre)*/
+    background-color: red;
+    width: 50%;
+}
+.vw{/*y el vw siempre tomara como referencia el ancho de la pantalla asi que tampoco se ve afectada por un elemento padre. Existe tambien la unidad de tamaño vh(viewxheight*/
+    background-color: yellow;
+    width: 50vw;
+}
+/*si hacemos la pantalla mas pequeña el unico que mantendria su tamaño es el .px que esta expresado su tamaño en pixeles*/

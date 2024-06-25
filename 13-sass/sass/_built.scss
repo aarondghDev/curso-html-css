@@ -1,0 +1,78 @@
+///!!!!!!!!! importante, para que podamos usar esto y nos lo muestre en pantalla, tenemos que vincular este archivo (o el principal que seria styles.scss con el styles.css, este esta vinculado con el principal) y para ello en la terminal usamos "sass --watch styles.scss styles.css" esto esta en el cuaderno de todas formas
+
+
+///funciones con cadenas de texto
+@use "sass:string";//con esto estariamos importando los estilos de este elemento de la pagina de sass que tinene por defecto, ver en la pagina oficial los demas que tiene, y el cuaderno tambien tiene mas info. Tambien debemos tener en cuenta que las diferentes funciones las tenemos que importar al principio de el archivo, como esta de string y la de abajo de list y todas las demas que vayamos a usar
+@use "sass:list";
+@use "sass:selector";
+@use "sass:color";
+@use "sass:math";
+
+@debug "hola";//el debug nos sirve para mostrar algo en pantalla(recordar que hay que importar este archivo secundario a el archivo principal para que aparezca lo que hagamos, ya que es el principal el que compila a el css
+@debug string.index("Helvetica Neue", "Neue");
+
+//aqui abajo lo que estamos haciendo es crear un primer string (variable) "Helvetica" a el cual le queremos añadir algun texto luego, entonce creamos un segundo string(variable) en la cual usaremos el"string.insert" que seria la funcion, seguido de entre los parentesis el nombre de la variable seguido de el texto que le queremos introducir seguido de el numero de el espacio en el que queremos que se introduzca el nuevo texto, en este caso "10" pero si fuera "9" se pondira una letra antes y asi sucesivamente
+$string: "Helvetica";
+$newString: string.insert($string, " bold", 10);
+
+@debug $newString;//y con el @debug podemos ver la variable que hemos creado sin necesidad de abrirlo enla pagina, es mas sencillo asi
+
+@debug string.length($newString); //esta funcion ".lenght" nos permite ver el tamaño de las string 
+
+///funciones con listas
+
+$lista1: 10px, 10px, 0px, 15px; //esto podria separarse con la coma o sin la coma con un espacio
+@debug $lista1; // Esto  nos mostraria la lista en pantalla
+@debug list.append($lista1, 25px, space);//esta funcion(list.append) nos añadiria el valor que le digamos(25px en este caso) a la lista que le digamos($lista1 en este caso) y el space lo que haria es convertir la separacion por comas en separacion por espacios en la lista, y estas funcines de lista lo que hace es crear una copia de la lista original
+
+$border-costum: solid 1px #ccc;
+@debug list.index($border-costum, 2px);//nos devolveria un nulo ya que ne la lista no existe un 2px
+@debug list.index($border-costum, 1px);//nos devolvera un 2 que seria la posicion en el que esta ese elemento en la lista(aqui los indecis no empiezan desde 0 sino en el 1
+
+$border-2: (solid, 1px, #ccc);// esta funcion nos devolvera un boolean true o false, como no tiene [] el resultado el false
+@debug list.is-bracketed($border-2);
+
+@debug list.join($lista1, $border-costum, space);//esta funcion nos devolvera las dos lista unidas, y como le pusimos el "space" nos la devolvera sin coma, solo separadas con un espacio, a diferencia de la de abajo que nos la devolvera con las comas como estan definidas
+@debug list.join($lista1, $border-costum);
+
+@debug list.length($lista1);//este nos devolvera el largo de la lista, el numero de elementos que tenga
+@debug list.length(list.join($lista1, $border-costum));//podemos tambien meter una funcion dentro de otra funcion
+
+@debug list.separator($border-costum);//esta funcion nos dira el separador que tiene la lista
+@debug list.separator($lista1);
+
+@debug list.set-nth($border-costum, 2, 2px);//podemos tambien cambiar los valores de una lista con el .set-nth, le diriamos la lista, la posicion que le queremos cambiar y el nuevo valor, esto nos crearia una copia de la lista
+
+//funcion de selectores
+$selector-1: "a";
+$selector-2: ".disabled";
+@debug selector.append($selector-1, ".disabled");
+
+//funciones de colores 
+$color: rgb(238, 238, 238);
+@debug color.adjust($color, $red: -100);
+$color-2: rgb(138, 238, 238);//y este seria el color modificado
+
+//funciones con numeros
+@debug math.$e;//aqui podriamos acceder  la constante e
+@debug math.$pi;//aqui podriamos acceder  la constante pi
+
+@debug math.ceil(4.1);//podemos hacer redondeos, lo que nos acercara a el numero mas cercano por arriba
+@debug floor(4.1);//es el mismo que el de arriba pero al contario
+
+@debug math.clamp(0, -6, 10);//sirve para calcular dimensiones cuando queramos hacer algo responsive, le damos un rango y si el numero se pasa de el rango le da el mayor numero de el rango y si no llega le devolvera el menor de el rango, el pimero(0) seria el menor de el rango, el de el medio seria el numero que le pasemos (puede ser cualquiera), y el ultimo sera el mayor de el rango (10). Tambien se usa para calcular tamaños de fuentes, anchos, alturas y demas
+
+@debug math.max(3, 4, 7,256, 15, 33);//esta nos devuelve el numero mas alto de una lista e numeros
+@debug math.min(3, 4, 2, 7, 256, 15, 33);//lo mismo pero con el menor numero de la lista
+
+@debug math.round(4.6);//el .round nos redondea el numero ->5
+@debug math.round(4.4);//->4
+
+@debug math.abs(0);
+@debug math.abs(-8);//el math.abs nos devolvera el valor absoluto
+
+@debug math.pow(2, 12);//el .pow sirve para elevar, la base (2) por el exponente (12);
+@debug math.pow(2, math.abs(-23));//podemos integrar funciones dentro de funciones
+
+
+

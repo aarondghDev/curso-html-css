@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barras de progreso(progress)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container py-4">
+        <div class="progress">
+            <div class="progress-bar" style="width: 57%;">57%
+            </div><!-- y esta seria la barra de progreso, en bootstrap nos dan una maner de definir el progreso de la barra, pero en el curso recomiendan usar el atributo style="width: x%; para tener un mejir control de la barra y el progreso. Tambien le podemos añadir labels, para indicar el porcentaje de progreso por ejemplo, y este label se pondra en el espacio de el progreso que tengamos, ver en la pagina-->
+        </div>
+        <!--tambien le podemos decir que tenga un heigth mediante el estilo, como vemos abajo-->
+            <div class="progress mt-4"  style="height: 5px;">
+                <div class="progress-bar" style="width: 76%;">76%
+                </div>
+        </div>
+<!--le podemos cambiar el color-->
+        <div class="progress mt-4">
+            <div class="progress-bar bg-success" style="width: 33%;">33%
+            </div>
+    </div>
+<!--podemos concatenar diferentes porgress bar-->
+<div class="progress mt-4">
+    <div class="progress-bar bg-success" style="width: 33%;">33%
+    </div>
+    <div class="progress-bar bg-danger" style="width: 9%;">9%
+    </div>
+</div>
+<!--le podemos dar animaciones a las barras con strip, ver en la pagina(tambien le podemos poner solo los strip sin animarlos, la animacion puede servir si es algo que esta cargando y cambiando constantemente) tambien-->
+<div class="progress mt-4">
+    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 33%;">33%
+    </div>
+</div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>

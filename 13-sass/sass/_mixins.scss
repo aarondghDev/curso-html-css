@@ -1,0 +1,10 @@
+/*a los mixin tambien le podemos pasar parametros como a una funcion, esto nos sirve para cuando sepamos que usaremos un atributo en los diferentes elementos en los que usemos el mixin pero que sea diferente en unos y en otros. y el color que tiene aqui seria el por defecto, por si no le damos ningun parametro al usar el mixin use este color por defecto*/
+@mixin formato-texto($bg-color: #f1f1f1){
+    width: 50rem;
+    color: $text-color;
+    text-transform: capitalize;
+    background-color: $bg-color;
+}
+/*lo de arriba seria un mixin que nos sirven para reutilizar codigo, supongamos que tenemos dos funciones que comparten la mayoria de los atributos, en vez de poner esas mismas lineas de atributos en cada funcion, creamos un mixin y lo integramos en la funcion con el estilo por defecto que queremos en texto por ejemplo, y podremos añadir mas atributos diferentes a cada uno*/
+$text-color: #c42929;
+/*la de arriba seria una variable en sass asi podemos modificar varios elementos qeu tengan esta variable en sus atributos como vemos abajo con los p y los h*/

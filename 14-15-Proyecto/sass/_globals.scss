@@ -1,0 +1,210 @@
+@use "components";
+@mixin section-display {    
+    width: 100%;
+    max-width: 992px;
+    margin: auto;
+    padding: 3rem;
+}
+html{
+    margin: 0;
+    min-width: 100vw;
+}
+
+body{
+padding: 0;
+margin: 0rem;
+}
+.nav{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 4rem;
+    border-bottom: solid 1px #ddd;
+}
+.sec-home {
+    display: flex;
+    @include section-display();
+    align-items: center;
+    .home-img{
+        height: 35rem;
+        padding: 4rem;
+    }
+    .home-cta {
+        flex: 1;
+        .cta-text{
+            color: components.$color-main;//como la varia de el color $color-main esta en otra carpeta, primero lo importamos, usando el "use al principio de este archivo lo podemos ver y al usarlo debemos usar el namespace de el nombre de la carpeta
+        }
+        .home-title{
+            width: 20rem;
+            font-size: 3rem;
+        }
+        .home-description{
+            width: 300px
+        }
+        .lead-magnet{
+            .input-col{
+                max-width: 200px
+            }
+        }
+    }
+}
+.sec-features {
+    @include section-display();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .intro{
+        text-align: center;
+        h3{
+            font-size: 1.8rem;
+        }
+        p{
+            font-size: 0.8rem;
+            color: #888;
+        }
+    }
+    .features{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        .text{
+            padding: 2rem 0;
+            flex: 1;//investigar esto de el flex para que sirve, el dice que flex:1 es para que siempre este al maximo, supongo que de tamaño
+        }
+            .feature{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+                .description{
+                    margin-left: 1rem;
+                    max-width: 20rem;
+                    .description-title{
+                        font-size: 1.15rem;
+                        max-width: 80%;//esto lo puse yo
+                        }
+                    }
+                    .description-text{
+                        font-size: 1rem;
+                    }
+                }
+
+        
+        .image {
+            img { 
+            max-width: 23rem;
+            height: 18rem;
+            }
+        }
+    }
+
+.sec-benefits{
+    border-top: 1px solid #ddd;
+    .intro{
+        @extend .sec-features, .intro;
+    }
+    .benefit-cards{
+        width: 100%;
+        padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+}
+
+.sec-kpis {
+    width: 100%;//esto es para que no se pase de el tamaño de la pantalla(osea que no genere un scroll lateral, ya que este seria para el background, y los elementos como tal dentro de este elemento tendran otros atributos)  
+    background-color: components.$color-main;
+    color: white;
+    padding: 4rem;
+
+    .kpi{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .number{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    .desc{
+        font-size: 0.9rem;
+        color: #ffffffaa;
+    }
+}
+
+.sec-onboarding{
+    .intro{
+        @extend .sec-features, .intro;
+    }
+    .steps{
+        padding: 0.7rem 5rem 7rem;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+
+        .step-separator{
+            flex:0.9;//este atributo lo que hace(por lo menos en este caso es eparar los elementor
+            border-top: 2px solid #ddd;
+            margin: 0 1rem;
+        }
+    }
+}
+
+.sec-footer-cta{
+    background-color: components.$color-footer;
+    padding: 5rem;
+    background-image: url("../assets/img/img-footer.avif");
+    background-position: 120%;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    .footer-cta{
+    width: 50%;
+
+    }
+
+        .cta-title{
+            font-size: 2rem;
+        }
+
+        .cta.description{
+            font-size: 1.1rem
+        }
+    }
+/*esta @media es para cambiar los elementos si pasa de el tamaño que le dijimos */
+    @media (max-width: 768px){
+        .sec-onboarding{
+            .steps{
+                flex-direction: column;
+            }
+        }
+
+        .sec-footer-cta{
+            background-image: none;
+            .footer-cta{
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .sec-benefits{
+            .intro{
+                text-align: center;
+            } 
+            h3{
+                font-size: 2rem;
+            }
+        }
+
+        .sec-features{
+            .intro{
+                h3{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 1rem;
+            }
+        }
+
+        }
+    }

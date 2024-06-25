@@ -1,0 +1,59 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.btn-tooltip{
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: green;
+    color: white;
+    border-bottom: 2px solid darkgreen;
+    cursor: pointer;
+    transition: background-color 2s;
+}
+.btn-tooltip:hover{
+    background-color: rgb(2, 86, 2);
+}
+/*.btn-tooltip:hover::before{     
+    content: "esto es un tooltip";
+}
+esta seria una forma de hacerlo pero no es la mejor*/
+.tooltip{
+    position: absolute;
+    /*visibility: hidden; leer explicacion de abajo*/
+    opacity: 0;
+    top: -50px;
+    left: -100%;
+    transform: translateX(25%);
+    color: rgb(198, 193, 193);
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: opacity 300ms;
+
+}
+.btn-tooltip:hover .tooltip{
+    /*visibility: visible; y esta seria una manera de añadir un tooltip a un elemento de nuestra pagina, llamamos a el elemento que queramos que tenga el tooltip, le damos la pseudoclase hover y llamamos a el tooltip para qur aparezca al pasar por encima de el elemento, previamente dandole a la clase de el tooltip un "visibility: hidden; para que no se vea y aqui dandole un "visibility: visible para que se vea al pasar por encima de el boton en este caso*/
+    opacity: 1;
+    /*y la otra manera es con el atributo opacity dandole una opacidad a el tooltip de 0 para que no se vea y cunado pasemos por encima cambie su opacidad a 1, esto sirve para cuando queremos darle una transicion a la aparicion de el tooltip que de la otra forma no es tan facil*/
+}
+.tooltip::before{
+    content: ' ' ;
+    border: solid 10px transparent;
+    border-top-color: #333;/*seria para hacer un triangulo para hacer decir a que hace refencia el tooltip*/
+    position: absolute;
+    top: 42px;
+    left: 45%;
+    /*transform: translateX(-50%); tambien lo podemos posicionar en el eje x con este atributo que dice es que tenga un -50% del tamaño de el before hacia la izquierda, no entendi bien pero ahi esta*/
+
+}
+/*.triangulo{
+    border: solid 10px transparent;
+    border-top: #333;
+} de esta manera podemos crear un triangulo para indicar a que elemento hace referencia el tooltip, vendia siendo un cuadrado al cual le dimos uno de los bordes color y a los otros bordes transparencia para que no se vean*/

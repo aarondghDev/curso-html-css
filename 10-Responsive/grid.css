@@ -1,0 +1,30 @@
+.contenedor{
+    display: grid;
+    gap: 0.5rem;
+    /*row-gap: 1rem;con estos atributos de gap, podemos especificar el gap que queremos entre elementos de las columnas y las filas, tambien podriamos usar gap simplemente si lo que queremos es el mismo gap para estas
+    column-gap: 0.1rem;*/
+    grid-template-columns: auto auto auto;
+/*con los grid-template ya podemos empezar a decirle como queremos que distribuya los elementos en el contenedor, autox3 seria el por defecto y al decirle esto tendra un tamaño automatico que se hara mas grande o mas pequeño en base a el tamaño de la pantalla, al poner 3 auto estamos diciendole que son 3 columnas, si queremos mas columnas solo tendriamos que poner mas auto, tambien podemos hacer esto haciendo la sintaxis asi "grid-template-columns: repeat(3, auto); si queremos 4 columnas ponemos 4 en vez de 3 y asi y el auto o como queramos que se comporte */
+/*tambien podmeos definir diferente valores para los elemento asi= grid-template-columns: 20px 3rem 25vw; esto seria el tamaño de cada columna*/
+/*tambien podemos usar la unidad fraccion "fr"= grid-template-columns: 1fr 1fr 2fr*/
+/*de igual manera con los mismos atributos podemos afectar a las filas usando en vez de columns rows, y podmeos usar las unidades que queramos igual que en las columnas*/
+grid-template-rows:2fr 1fr 1fr;
+
+/*tambien podemos definir las areas donde queramos los elemento para luego en la clase de cada elemento decirle en que area lo queremos, con el atributo grid-area:  ; ver mas abajo en .item1
+grid-template-areas: 'head head head' 'main main aside' 'footer footer footer';*/
+}
+.item{
+    background-color: aquamarine;
+    padding: 0.25rem;
+    font-size: 2rem;
+    border: solid 1px blue;
+}
+.item1{
+    /*grid-area: footer;*/
+    grid-area: 2 / 1 / 4 / 3;/*aqui le estamos diciendo las columnas y filas que queremos que ocupe, siendo el primer numero la fila el segundo la colunma el tercero hasta la fila y el tercero hasta la columna*/
+}
+.item7{
+    /*grid-area: head;*/
+    /*podemos definir las areas directamente en los elemento, con el atributo: el primer numero le dice donde empezar,( de las columnas) y el segundo donde terminar*/
+    grid-column: 2/4;/*tambien le podemos decir donde empezar y con el span decirle cuantas columnas queremos que oucpe: grid-column: 2 / span 3;*/
+}

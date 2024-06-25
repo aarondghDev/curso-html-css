@@ -1,0 +1,15 @@
+:root {
+    --color-principal: rgb(160, 6, 114);
+    --ancho-principal: 350px;
+    /*asi definimos las variables, --nombre de la variable: propiedad; y luego para usarla usaremos el nombre que definimos, ver mas abajo como llamamos a nuestras variables*/
+}
+.titulo{
+    color: var(--color-principal);/*y asi es como llamamos a la variables*/
+}
+.footer{color: var(--color-principal);
+}
+.contenedor{
+    background-color: antiquewhite;
+    padding: 1rem;
+    max-width: var(--ancho-principal);
+}

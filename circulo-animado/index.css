@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* @keyframes moveLine {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+} */
+
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* .frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+} */
+
+body {
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    background-color: rgb(14, 1, 1);
+    margin: 0;
+    padding: 0;
+
+}
+
+.box {
+    display: flex;
+    background-color: rgb(75, 73, 107);
+    width: 20rem;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.circle {
+    display: flex;
+    border: 1px solid rgb(79, 26, 26);
+    border-radius: 50%; 
+    width: 10rem;
+    height: 10rem;
+    animation: rotateCircle 5s linear infinite;
+}
+
+.line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 50%; /* Asegura que las líneas estén centradas verticalmente */
+    transform-origin: left; /* Establece el origen de la transformación en la parte superior */
+    animation: moveLine 5s linear infinite alternate; /* Animación para mover las líneas */
+}
+
+.line:nth-child(odd) {
+    animation-delay: 0.5s; /* Retraso para crear un efecto de secuencia */
+}
+
+

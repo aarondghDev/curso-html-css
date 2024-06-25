@@ -1,0 +1,15 @@
+.contenedor-p{
+    color: green;
+}
+/*aqui estamos metiendo todos los <p> que queremos con este estilo en vez
+de darles una clase a cada uno con el estilo que queremos, asi no tenemos
+que escribir la clase en cada uno si no que afectamos a todos de una vez*/
+body section.main .contenedor p{/*aqui le estamos dando la direccion para que
+    busque mas facil y encuentre los p que tiene que darle el estilo*/
+    color: green;
+}
+.contenedor #boton-contenedor {/*aqui le estamos diciedno que altere el boton
+    que esta en el contenedor(el div) con el id "boton-contenedor"(los id
+    se les hace referencia con un "#"*/
+    background-color: yellow;
+}
